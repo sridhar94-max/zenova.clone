@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainbow</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #87ceeb;
+    }
+
+    .rainbow {
+      width: 500px;
+      height: 250px;
+      border-radius: 500px 500px 0 0;
+      border: 20px solid transparent;
+
+      background:
+        radial-gradient(
+          ellipse at center bottom,
+          transparent 0,
+          transparent 20%,
+          red 20%,
+
+          orange 28%,
+      
+          yellow 36%,
+        
+          green 44%,
+      
+          blue 52%,
+        
+          indigo 60%,
+          
+          violet 68%,
+          
+          transparent 76%
+        );
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="rainbow"></div>
+
+</body>
+</html>

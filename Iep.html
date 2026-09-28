@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(106, 161, 185);
+        color: rgb(173, 93, 31);
+    }
+    h1{
+        color: rgb(213, 224, 213);
+        font-style: italic;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: rgb(16, 16, 59);
+        padding:1px;
+        width:auto;
+    }
+    h2 {
+        color: rgb(5, 16, 5);
+        font-style: italic;
+        font-family: 'vardar', Courier, monospace;
+    }
+   
+    p{
+        color:rgb(67, 38, 120);
+        font-style: italic;
+        text-transform: capitalize;
+        text-shadow: 0cm 0.1cm 0.1cm rgb(20, 9, 9);
+        text-decoration: underline;
+
+    }
+    table {
+        background-color: rgb(232, 218, 218);
+        color: rgb(14, 15, 15);
+        text-transform: capitalize;
+    font-style: italic;
+
+    }
+    input{
+        background-color: rgb(191, 194, 194);
+        color: rgb(14, 15, 15);
+        text-transform: capitalize;
+        font-style: italic;
+    }
+    label{
+        color: rgb(14, 15, 15);
+        text-transform: capitalize;
+        font-style: italic;
+    }
+    div{
+        background-color: rgb(16, 16, 59);
+        color: rgb(168, 180, 180);
+        text-transform: capitalize;
+        font-style: italic;
+        padding: 0px;
+        margin: 0px;
+        border-collapse: collapse;
+    }
+    .rain{
+        background-color: rgb(62, 135, 213);
+        color: rgb(168, 180, 180);
+    }    
+</style>
+<body>
+    <form style="width:80%">
+            <legend color ="rgb(255, 255, 255)">IEP PROGRAM</legend>
+            <div>
+            <h1>Industry Edge program</h1>
+            <h3 align="center" >Student Portal</h3>
+            </div>
+        <center  style= "background-color: bisque; margin: 0px; padding:40px; border-collapse:collapse;">
+             <a href="Home">Home</a> |
+            <a href="About">About</a> |
+            <a href="Attendance">Attendance</a> |
+            <a href="Courses">Courses</a> |
+            <a href="Student">Student</a> |
+            <a href="Results">Results</a> |
+            <a href="Contact">Contact</a>
+        </center>
+        <hr>
+        <h2>HOME</h2>
+        <p color="rgb(255, 255, 255)">this is the home page of the website</p>
+        <hr>
+        <h2>ABOUT</h2>
+        <p color="rgb(255, 255, 255)">this is the about a student work report</p>
+        <hr>
+        <h2>ATTENDANCE</h2>
+        <label for="student name">Student Name:</label>
+        <input type="text" id="student name" placeholder="Enter your name" name="student name">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        <label for="status">Status:</label>
+        <select name="status" id="status">
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+            <option value="late">Late</option>
+        </select>
+        <input type="submit" value="Submit">
+        <hr>
+        <h2>ASSIGNMENTS</h2>
+        <label for="assignment">Assignment:</label>
+        <input type="text" id="assignment" placeholder="Enter your assignment" name="assignment">
+        <label for="due date">Due Date:</label>
+        <input type="date" id="due date" name="due date"><br>
+        <br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" placeholder="Enter assignment description" name="description"><br>
+        <br>
+        <input type="submit" value="upload">
+        <hr>
+        <h2>COURSES</h2>
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+            <li>sql</li>
+            <li>java</li>
+            <li>python</li>
+        </ul>
+        <hr>
+        <h2>STUDENT</h2>
+        <table border="1" background-color="rgb(255, 255, 255)">
+            <tr>
+            
+                <th>ID</th>
+                <th>NAME</th>
+                <th>BRANCH</th>
+                
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>rahul</td>
+                <td>Cse</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>priya</td>
+                <td>Ece</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>kiran</td>
+                <td>It</td>
+            </tr>
+        </table>
+        <hr>
+        <h2>Results</h2>
+        <table border="1" back>
+            <tr>
+                <div class="bow">
+                <th>student</th>
+                <th>sql</th>
+                <th>Marks</th>
+                </div>
+            </tr>
+            <tr>
+                <td>kiran</td>
+                <td>sql</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>rahul</td>
+                <td>java</td>
+                <td>90</td>
+            </tr>
+        </table>
+        <hr>
+            <h2>contact</h2>
+            <p>email: rahul@example.com</p>
+            <p>phone: 1234567890</p>
+            <p>address: 123 Main St, City, Country</p>
+             </form>
+            </body>
+            </html>

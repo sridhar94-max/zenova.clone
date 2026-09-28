@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: white;
+}
+.navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: white;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #e23744;
+}
+.hero {
+    height: 360px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 120, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzi7TarcCDLemlzc_JkCBYQrHcazoBrPcLsGJZHY9OfQ&s=10") no-repeat
+        center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-content {
+    color: rgb(254, 252, 252);
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+
+/*SEARCH */
+
+.search-box {
+    width: 620px;
+    background: white;
+    padding: 5px;
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+}
+
+.location,
+.search {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.location {
+    width: 42%;
+    border-right: 1px solid #a70a0a;
+     
+}
+
+.search {
+    width: 43%;
+}
+
+.search-box i {
+    color: #e23744;
+    margin-right: 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 13px 5px;
+    font-size: 12px;
+}
+
+.search-box button {
+    width: 15%;
+    border: 50px;
+    background: #e23744;
+    color: white;
+    padding: 12px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.categories-cards {
+    display: flex;
+    
+    
+}
+
+
+    </style>
+</head>
+<body>
+    <!--navbar-->
+    <nav>
+        <header class="navbar">
+                <div class="logo">zomato</div>
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">Restaurants</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+                <button class="login">Login</button>
+        </header>
+        <!--hero section-->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover the best food & drinks in your city</h1>
+                <p>Order from the best restaurants in town and get it delivered to your doorstep.</p>
+                <div class="search-form">
+                    <input type="text" placeholder="Search for restaurants or dishes">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+            <div class="location">
+                <h2>Find restaurants near you</h2>
+                <div class="location-form">
+                    <input type="text" placeholder="Enter your location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+        </section>
+        <!--categories section-->
+        <section class="categories">
+            <h2>Popular Categories</h2>
+            <div class="category-cards">
+                <div class="category-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEBCu3ynoV8KPqm6P6DqW7Jw94yfEEpEUu7iVNRGpfYQ&s=10" alt="Pizza">
+                    <h3>Pizza</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCeETcWTTuLGgklDHyJqDKBzIRVPSaz8Xd-xo5qesrVw&s=10" alt="Burger">
+                    <h3>Burger</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAGb4GlhonJ7KfUeJ_xEd2nEx9BJwmtQVeXysB-9weBg&s=10" alt="Biryani">
+                    <h3>Biryani</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Lnix-ALeN6OM_0HTGGFi0IJ99HvSOmhqS76En7qPWA&s=10" alt="Dessert">
+                    <h3>Dessert</h3>
+                </div>
+            </div>
+        
+    </nav>
+</body>
+</html>

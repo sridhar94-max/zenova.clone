@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Task</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: white;
+            margin: 40px;
+        }
+
+        .invoice {
+            width: 770px;
+            margin: auto;
+            border-collapse: collapse;
+            font-size: 22px;
+        }
+
+        .invoice td,
+        .invoice th {
+            border: 2px solid #050505;
+            padding: 18px 22px;
+            vertical-align: middle;
+        }
+        .invoice-header {
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .date {
+            text-align: right;
+            color: rgb(107, 103, 103);
+        }
+
+       
+        .address {
+            height: 100px;
+            vertical-align: top !important;
+            line-height: 1.25;
+        }
+
+        .address strong {
+            font-size: 24px;
+        }
+
+       
+        .heading {
+            font-weight: bold;
+            text-align: left;
+            height: 55px;
+            background-color: rgb(232, 245, 245);
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        
+        .item-row {
+            height: 80px;
+        }
+
+        
+        .subtotal {
+            font-weight: bold;
+            height: 70px;
+        }
+
+        
+        .tax-label {
+            font-weight: bold;
+            height: 70px;
+            background-color: rgb(232, 245, 245);
+        }
+
+
+        
+        .grand-total {
+            font-weight: bold;
+            font-size: 25px;
+            height: 70px;
+        }
+
+        .grand-label {
+            text-align: right;
+            background-color: rgb(232, 245, 245);
+        }
+    </style>
+</head>
+
+<body>
+
+<table class="invoice">
+    <tr class="invoice-header">
+        <td colspan="2">
+            invoice #123
+        </td>
+
+        <td colspan="2" class="date">
+            8 August 2024
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="address">
+            <strong>Pay to:</strong><br>
+            ABC Pvt Ltd.<br>
+            123 MG Road<br>
+            Bengaluru, KA 560001
+        </td>
+        <td colspan="2" class="address">
+            <strong>Customer:</strong><br>
+            John Doe<br>
+            456 Park Street<br>
+            Kolkata, WB 700016
+        </td>
+    </tr>
+    <tr class="heading">
+        <th>Item</th>
+        <th>Qty.</th>
+        <th>Unit Price</th>
+        <th>Cost</th>
+    </tr>
+    <tr class="item-row">
+        <td>Pens</td>
+        <td class="center">100</td>
+        <td class="right">5.00</td>
+        <td class="right">500.00</td>
+    </tr>
+    <tr class="item-row">
+        <td>Calculators</td>
+        <td class="center">8</td>
+        <td class="right">100.00</td>
+        <td class="right">800.00</td>
+    </tr>
+    <tr class="subtotal">
+        <td colspan="3">
+            Subtotal
+        </td>
+
+        <td class="right">
+            1,300.00
+        </td>
+    </tr>
+    <tr class="tax">
+        <td colspan="2" class="tax-label">
+            Tax
+        </td>
+
+        <td class="center">
+            5%
+        </td>
+
+        <td class="right">
+            65.00
+        </td>
+    </tr>
+    <tr class="grand-total">
+        <td colspan="3" class="grand-label">
+            Grand Total
+        </td>
+
+        <td class="right">
+            ₹1,365.00
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>

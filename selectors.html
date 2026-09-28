@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .like{
+    background-color: rgb(16, 124, 4);
+    color: black;
+   }
+   .comment{
+    background-color: darkblue;
+    color: black;
+   }
+   .subscribe{
+    background-color: aquamarine;
+    color: black;
+
+   }
+    .share{
+        background-color: darkcyan;
+        color: black;
+        
+    }
+   .share:hover{
+    background-color: rgb(122, 129, 236);
+   }
+   .like:hover{
+    background-color: rgb(173, 57, 22);
+   }
+   .comment:hover{
+    background-color: rgb(43, 38, 193);
+   }
+   .subscribe:hover{
+    background-color: rgb(197, 13, 53);
+   }
+   .like:hover::after{
+    content: "👍";
+   }
+   .subscribe:hover::before{
+    content: "✅";
+   }
+   .comment:hover::after{
+    content: "💬";
+   }
+   .share:hover::after{
+     content: "📤";
+   }
+   #p{
+    color: rgb(2, 10, 81);
+    font-size: 20px;
+    font-weight:italic;
+    text-align: center;
+   }
+   #p::after{
+    content: "😊";
+   }
+  
+</style>
+</head>
+<body style="background-color: rgb(86, 147, 184);">
+    
+    <form style="width:50%; background-color: rgb(85, 105, 112);margin: auto; margin-top:5px; padding: 20px; border-radius: 10px;">
+    
+        <button class="like" id="like">like</button>
+
+
+        <button class="share" id="share">share</button>
+        <br>
+        <br>
+        <label for="comment"> <button class="comment" id="comment">comment:</button></label>
+        <input type="text" name="comment" id="comment" placeholder="write your comment here">
+    
+    <br>
+    <br>
+        <button class="subscribe" id="subscribe">subscribe</button>
+        <br>
+        <p id="p">Thank you for your feedback!</p>
+
+    </form>
+</body>
+</html>

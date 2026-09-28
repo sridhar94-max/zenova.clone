@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salva Venkata Sridhar - Resume</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f2f2f2;
+            color: #222;
+            line-height: 1.5;
+        }
+        .resume {
+            width: 210mm;
+            min-height: 300mm;
+            margin: 20px auto;
+            padding: 18mm;
+            background: #fff;
+        }
+        /* Header */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #222;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+        }
+        .header h1 {
+            font-size: 28px;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .header .title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .contact {
+            font-size: 11px;
+            line-height: 1.7;
+        }
+        .contact a {
+            color: #222;
+            text-decoration: none;
+        }
+        /* Sections */
+        section {
+            margin-bottom: 17px;
+        }
+        .section-title {
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #555;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            font-size: 11.5px;
+            text-align: justify;
+        }
+
+        /* Skills */
+        .skills p {
+            margin-bottom: 4px;
+        }
+        .skills strong {
+            font-weight: bold;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 12px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 12.5px;
+        }
+
+        .company {
+            font-size: 11.5px;
+            font-weight: bold;
+        }
+
+        .job ul {
+            margin: 5px 0 0 18px;
+        }
+
+        .job li {
+            font-size: 11px;
+            margin-bottom: 3px;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 9px;
+        }
+
+        .education-item h3 {
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        .education-item p {
+            font-size: 11px;
+        }
+
+        /* Certifications */
+        .certifications ul,
+        .activities ul {
+            margin-left: 18px;
+        }
+
+        .certifications li,
+        .activities li {
+            font-size: 11px;
+            margin-bottom: 4px;
+        }
+
+        /* Two columns */
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        /* Print */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .resume {
+                margin: 0;
+                width: 210mm;
+                min-height: 297mm;
+                padding: 15mm;
+            }
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .resume {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 25px;
+            }
+
+            .bottom-section {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="resume">
+    <!-- HEADER -->
+    <header class="header">
+        <h1>SALVA VENKATA SRIDHAR</h1>
+        <div class="title">
+            ASPIRING SOFTWARE ENGINEER • B.TECH COMPUTER SCIENCE & ENGINEERING
+        </div>
+        <div class="contact">
+           Pandillapalli, Prakasam District, Andhra Pradesh, India |
+            +91 7093976897 |
+            <a href="mailto:salvasridhar594@gmail.com">
+                salvasridhar594@gmail.com
+            </a>
+            <br>
+            <a href="https://www.linkedin.com/in/salva-sridhar-bb29b037b">
+                linkedin.com/in/salva-sridhar-bb29b037b
+            </a>
+            |
+            <a href="https://www.hackerrank.com/profile/salvasridhar594">
+                hackerrank.com/profile/salvasridhar594
+            </a>
+            |
+            <a href="https://github.com/sridhar94-max">
+                github.com/sridhar94-max
+            </a>
+        </div>
+    </header>
+    <!-- CAREER OBJECTIVE -->
+    <section>
+        <div class="section-title">Career Objective</div>
+        <p>
+            Motivated and hardworking B.Tech Computer Science and Engineering
+            student seeking an entry-level software or IT opportunity to apply
+            programming and web-development skills, strengthen technical
+            expertise, and contribute effectively to organizational goals.
+        </p>
+    </section>
+    <!-- EDUCATION -->
+    <section>
+        <div class="section-title">Education</div>
+        <div class="education-item">
+            <h3>B.Tech in Computer Science & Engineering</h3>
+            <p>
+                Rajahmahendri Institute of Engineering and Technology,
+                Rajahmundry, AP • CGPA: 7.2
+            </p>
+            <p>2023 – 2027</p>
+        </div>
+
+        <div class="education-item">
+            <h3>Intermediate (MPC)</h3>
+            <p>
+                Sri Saraswathi Junior College • CGPA: 8.8
+            </p>
+            <p>2021 – 2023</p>
+        </div>
+
+        <div class="education-item">
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p>
+                zilla parishad high School • CGPA: 8.5
+            </p>
+            <p>2020 – 2021</p>
+        </div>
+    </section>
+    <!-- TECHNICAL SKILLS -->
+    <section class="skills">
+        <div class="section-title">Technical Skills</div>
+
+        <p>
+            <strong>Languages:</strong>
+            Java, C, JavaScript
+        </p>
+
+        <p>
+            <strong>Web Technologies:</strong>
+            HTML5, CSS, JavaScript
+        </p>
+
+        <p>
+            <strong>Tools & IDEs:</strong>
+            VS Code,GitHub
+        </p>
+
+        <p>
+            <strong>Core Concepts:</strong>
+             Web Development, Database Management Systems (DBMS), Generative AI & LLMs
+        </p>
+    </section>
+
+
+    <!-- INTERNSHIP EXPERIENCE -->
+    <section>
+        <div class="section-title">Internship Experience</div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">
+                        Generative AI & LLM Intern
+                    </div>
+                    <div class="company">Skill Dizre</div>
+                </div>
+
+                <span>May 2026 – Jul 2026</span>
+            </div>
+
+            <ul>
+                <li>
+                    Explored Generative AI architecture and Large Language
+                    Model (LLM) concepts using Python and machine learning
+                    frameworks.
+                </li>
+
+                <li>
+                    Contributed to AI model development workflows for
+                    processing user prompts and generating structured responses.
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">
+                        Rule-Based Chatbot Developer Intern
+                    </div>
+                    <div class="company">Talentrek</div>
+                </div>
+
+                <span>May 2025 – Jul 2025</span>
+            </div>
+
+            <ul>
+                <li>
+                    Designed and implemented interactive web interfaces for
+                    a rule-based chatbot utilizing HTML, CSS, and JavaScript.
+                </li>
+
+                <li>
+                    Applied core conversational AI principles to enhance
+                    user interaction flows and system responsiveness.
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- BOTTOM TWO COLUMNS -->
+    <div class="bottom-section">
+        <!-- CERTIFICATIONS -->
+        <section class="certifications">
+            <div class="section-title">Certifications</div>
+
+            <ul>
+                <li>
+                    Oracle Certified Foundation Associate – Oracle
+                </li>
+
+                <li>
+                    Introduction to Internet of Things (IoT) – NPTEL
+                </li>
+
+                <li>
+                    Chatbot Using Rule-Based Approach – AWS
+                </li>
+                <li>
+                    Introduction to Programming in C – Cisco
+                </li>
+
+                <li>
+                    Fundamentals of Responsible Artificial Intelligence –Infosys
+                </li>
+            </ul>
+            <section class="activities">
+            <div class="section-title">Activities</div>
+            <p style="margin-top: 8px;">
+                <strong>Interests & Hobbies:</strong>
+            </p>
+
+            <ul>
+                <li>Playing Cricket</li>
+                <li>Exploring emerging Tech & AI trends</li>
+            </ul>
+        </section>
+        </section>
+
+    </div>
+
+</div>
+
+</body>
+</html>

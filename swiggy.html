@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Food Delivery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+          <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: white;
+}
+
+
+/*  NAVBAR */
+
+.navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: white;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #e23744;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.navbar nav a:hover {
+    color: #e23744;
+}
+
+.login-btn {
+    background: #e23744;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #c82333;
+}
+
+
+/* HERO  */
+
+.hero {
+    height: 360px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 120, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzi7TarcCDLemlzc_JkCBYQrHcazoBrPcLsGJZHY9OfQ&s=10") no-repeat
+        center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-content {
+    color: rgb(254, 252, 252);
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+
+/*SEARCH */
+
+.search-box {
+    width: 620px;
+    background: white;
+    padding: 5px;
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+}
+
+.location,
+.search {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.location {
+    width: 42%;
+    border-right: 1px solid #a70a0a;
+     
+}
+
+.search {
+    width: 43%;
+}
+
+.search-box i {
+    color: #e23744;
+    margin-right: 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 13px 5px;
+    font-size: 12px;
+}
+
+.search-box button {
+    width: 15%;
+    border: 50px;
+    background: #e23744;
+    color: white;
+    padding: 12px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* CATEGORIES  */
+
+.categories,
+.restaurants {
+    padding: 35px 7%;
+}
+
+.categories h2,
+.restaurants h2 {
+    font-size: 22px;
+    margin-bottom: 33px;
+}
+
+.category-container {
+    display: flex;
+    gap: 55px;
+}
+
+.category {
+    width: 70px;
+    text-align: center;
+}
+
+.food-icon {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: #fff4f1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+
+    margin-bottom: 8px;
+}
+
+.category p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* RESTAURANTS */
+
+.restaurant-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.restaurant-card {
+    background: rgb(250, 250, 250);
+    border-radius: 7px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    overflow:hidden;
+}
+
+.restaurant-card:hover {
+    transform: translatey(0px);
+    box-shadow: 0 5px 20px rgba(16, 14, 14, 0.15);
+}
+
+.restaurant-image {
+    height: 150px;
+
+    background: #dcdbdb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+}
+
+.restaurant-details {
+    padding: 13px;
+}
+
+.restaurant-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-title h3 {
+    font-size: 15px;
+}
+
+.rating {
+    background: #087f23;
+    color: white;
+
+    font-size: 11px;
+
+    padding: 4px 7px;
+
+    border-radius: 3px;
+}
+
+.restaurant-details p {
+    color: #474caa;
+    font-size: 11px;
+    margin: 7px 0 12px;
+}
+
+.restaurant-bottom {
+    display: flex;
+    justify-content:space-between;
+
+    color: #888;
+    font-size: 10px;
+}
+/*  APP SECTION  */
+
+.app-section {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.app-section h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.app-section p {
+    color: #918d8d;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+.download-btn {
+    background: #e23744;
+    color: white;
+
+    border: none;
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background: #c82333;
+}
+
+
+/*  FOOTER */
+
+footer {
+    background: #080808;
+    color: white;
+    padding: 35px 7% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-brand h2 {
+    color: #e23744;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    color: #bbb;
+    font-size: 12px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-column h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 12px;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 11px;
+    color: #ccc;
+}
+
+
+/*  RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .restaurant-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-box {
+        width: 90vw;
+    }
+
+    .category-container {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .search-box {
+        flex-direction:coloum;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .location,
+    .search {
+        width: 10%;
+        border: none;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .restaurant-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+h2{
+    color: rgb(5, 8, 96);
+}
+
+          </style>
+</head>
+
+<body>
+
+    <!--NAVBAR-->
+    <header class="navbar">
+
+        <div class="logo">Swiggy</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Restaurants</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <button class="login-btn">Login</button>
+
+    </header>
+
+
+    <!--  HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Discover the best food & drinks</h1>
+
+            <p>Order delicious food from your favourite restaurants</p>
+
+            <div class="search-box">
+
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" placeholder="Enter your location">
+                </div>
+
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for restaurant or dish">
+                           
+                </div>
+
+                <button>Search</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--  CATEGORIES  -->
+    <section class="categories">
+
+        <h2 >Explore Food Categories</h2>
+
+        <div class="category-container">
+
+            <div class="category">
+                <div class="food-icon">🍕</div>
+                <p>
+                    <marquee>Pizza</marquee>
+                </p>
+            </div>
+
+            <div class="category">
+                <div class="food-icon">🍔</div>
+                <p>
+                    <marquee>Burger</marquee>
+                </p>
+            </div>
+
+            <div class="category">
+                <div class="food-icon">🍗</div>
+                <p>
+                    <marquee>Chicken</marquee>
+                </p>
+            </div>
+
+            <div class="category">
+                <div class="food-icon">🍜</div>
+                <p>
+                    <marquee>Noodles</marquee>
+                </p>
+            </div>
+
+            <div class="category">
+                <div class="food-icon">🍲</div>
+                <p>
+                    <marquee>Biryani</marquee>
+                </p>
+            </div>
+
+            <div class="category">
+                <div class="food-icon">🍰</div>
+                <p>
+                    <marquee>Desserts</marquee>
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--RESTAURANTS -->
+    <section class="restaurants">
+
+        <h2>Popular Restaurants</h2>
+        <div class="restaurant-container">
+            <!-- Restaurant 1 -->
+            <div class="restaurant-card">
+
+                <div class="restaurant-image">🍕</div>
+
+                <div class="restaurant-details">
+
+                    <div class="restaurant-title">
+                        <h3>Pizza Palace</h3>
+                        <span class="rating">★ 4.5</span>
+                    </div>
+
+                    <p>Pizza, Italian, Fast Food</p>
+
+                    <div class="restaurant-bottom">
+                        <span>₹300 for two</span>
+                        <span>25 min</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Restaurant 2 -->
+            <div class="restaurant-card">
+
+                <div class="restaurant-image">🍛</div>
+
+                <div class="restaurant-details">
+
+                    <div class="restaurant-title">
+                        <h3>Hyderabad Biryani</h3>
+                        <span class="rating">★ 4.7</span>
+                    </div>
+
+                    <p>Biryani, Mughlai, Indian</p>
+                     <div class="restaurant-bottom">
+                        <span>₹400 for two</span>
+                        <span>30 min</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Restaurant 3 -->
+            <div class="restaurant-card">
+
+                <div class="restaurant-image">🍔</div>
+
+                <div class="restaurant-details">
+
+                    <div class="restaurant-title">
+                        <h3>Burger Hub</h3>
+                        <span class="rating">★ 4.3</span>
+                    </div>
+
+                    <p>Burgers, Fast Food, Beverages</p>
+
+                    <div class="restaurant-bottom">
+                        <span>₹250 for two</span>
+                        <span>20 min</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Restaurant 4 -->
+            <div class="restaurant-card">
+
+                <div class="restaurant-image">🍜</div>
+
+                <div class="restaurant-details">
+
+                    <div class="restaurant-title">
+                        <h3>Chinese Bowl</h3>
+                        <span class="rating">★ 4.4</span>
+                    </div>
+
+                    <p>Chinese, Noodles, Asian</p>
+
+                    <div class="restaurant-bottom">
+                        <span>₹350 for two</span>
+                        <span>32 min</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!--  APP SECTION -->
+    <section class="app-section">
+
+        <h2>Get the Swiggy App</h2>
+
+        <p>Order your favourite food anytime, anywhere.</p>
+
+        <button class="download-btn">Download App</button>
+
+    </section>
+
+
+    <!--  FOOTER  -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>Swiggy</h2>
+                <p>Discover the best food around you.</p>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact</a>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>For Restaurants</h3>
+                <a href="#">Partner With Us</a>
+                <a href="#">Business Login</a>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>Social Links</h3>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Foodie. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
