@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZENOVA — Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-color: #f7f9fa;
+      --card-bg: #ffffff;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --accent: #10b981;
+      --accent-hover: #059669;
+      --border-color: #f3f4f6;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+      --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      padding: 40px;
+      border: 1px solid var(--border-color);
+    }
+
+    .brand-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .brand-logo {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-main);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .welcome-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .welcome-subtext {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      background-color: #fafafa;
+      font-size: 14px;
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .form-input:focus {
+      border-color: var(--accent);
+      background-color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    }
+
+    .form-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      font-size: 13px;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .remember-me input {
+      accent-color: var(--accent);
+      border-radius: 4px;
+    }
+
+    .forgot-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .forgot-link:hover {
+      color: var(--text-main);
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: var(--text-main);
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #1f2937;
+    }
+
+    .submit-btn:active {
+      transform: scale(0.99);
+    }
+
+    .footer-quote {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="brand-header">
+      <div class="brand-logo">ZENOVA</div>
+      <div class="brand-subtitle">Student Wellness</div>
+      <h1 class="welcome-text">Welcome back</h1>
+      <p class="welcome-subtext">Your wellbeing matters. Take things one step at a time.</p>
+    </div>
+
+    <form onsubmit="event.preventDefault();">
+      <div class="form-group">
+        <label class="form-label" for="email">Student ID or Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          class="form-input" 
+          placeholder="student@university.edu" 
+          required 
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          class="form-input" 
+          placeholder="••••••••" 
+          required 
+        />
+      </div>
+
+      <div class="form-options">
+        <label class="remember-me">
+          <input type="checkbox" />
+          <span>Remember me</span>
+        </label>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="submit-btn">Enter Your Wellness Space</button>
+    </form>
+
+    <div class="footer-quote">
+      ✨ Building a healthy balance today.
+    </div>
+  </div>
+
+</body>
+</html>

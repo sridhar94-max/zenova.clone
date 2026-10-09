@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ZENOVA — Student Wellness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 /* =========================================================
@@ -154,6 +157,174 @@ body {
     font-size: 11px;
     color: #9295aa;
     line-height: 1.5;
+}
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: #f7f9fa;
+    color: #111827;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.login-screen[hidden],
+.app[hidden] {
+    display: none;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border: 1px solid #f3f4f6;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+.login-brand-header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.login-brand-logo {
+    margin-bottom: 4px;
+    color: #111827;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.login-brand-subtitle {
+    margin-bottom: 24px;
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.login-welcome {
+    margin-bottom: 6px;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login-welcome-subtext {
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.login-form-group {
+    margin-bottom: 20px;
+}
+
+.login-form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.login-form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    outline: none;
+    background: #fafafa;
+    color: #111827;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.login-form-input:focus {
+    border-color: #10b981;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.login-form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-size: 13px;
+}
+
+.login-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.login-remember input {
+    accent-color: #10b981;
+}
+
+.login-forgot-link {
+    color: #6b7280;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.login-forgot-link:hover {
+    color: #111827;
+}
+
+.login-submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: 10px;
+    background: #111827;
+    color: #ffffff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.login-submit-btn:hover {
+    background: #1f2937;
+}
+
+.login-submit-btn:active {
+    transform: scale(0.99);
+}
+
+.login-footer-quote {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #f3f4f6;
+    color: #6b7280;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media(max-width:430px) {
+    .login-container {
+        padding: 32px 24px;
+    }
 }
 
 /* =========================================================
@@ -1050,7 +1221,44 @@ input[type="range"] {
 
 <body>
 
-<div class="app">
+<section class="login-screen" id="loginScreen" aria-labelledby="loginHeading">
+    <div class="login-container">
+        <header class="login-brand-header">
+            <div class="login-brand-logo">ZENOVA</div>
+            <div class="login-brand-subtitle">Student Wellness</div>
+            <h1 class="login-welcome" id="loginHeading">Welcome back</h1>
+            <p class="login-welcome-subtext">Your wellbeing matters. Take things one step at a time.</p>
+        </header>
+
+        <form id="loginForm">
+            <div class="login-form-group">
+                <label class="login-form-label" for="loginIdentity">Student ID or Email</label>
+                <input class="login-form-input" type="text" id="loginIdentity" name="identity"
+                       placeholder="student@university.edu" autocomplete="username" required>
+            </div>
+
+            <div class="login-form-group">
+                <label class="login-form-label" for="loginPassword">Password</label>
+                <input class="login-form-input" type="password" id="loginPassword" name="password"
+                       placeholder="Enter your password" autocomplete="current-password" required>
+            </div>
+
+            <div class="login-form-options">
+                <label class="login-remember">
+                    <input type="checkbox" name="remember">
+                    <span>Remember me</span>
+                </label>
+                <a href="#" class="login-forgot-link" onclick="event.preventDefault(); alert('Please contact your school support team to reset your password.');">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="login-submit-btn">Enter Your Wellness Space</button>
+        </form>
+
+        <div class="login-footer-quote">Building a healthy balance today.</div>
+    </div>
+</section>
+
+<div class="app" id="wellnessApp" hidden>
 
 <!-- =======================================================
      SIDEBAR
@@ -1101,6 +1309,11 @@ input[type="range"] {
     <button class="nav-btn" onclick="openPage('support',this)">
         <span class="nav-icon">!</span>
         <span>Support Center</span>
+    </button>
+
+    <button class="nav-btn" onclick="logoutToLogin()">
+        <span class="nav-icon">↪</span>
+        <span>Sign out</span>
     </button>
 
     <div class="sidebar-bottom">
@@ -1795,6 +2008,19 @@ input[type="range"] {
 
 let currentMood = "Good";
 let currentStress = 3;
+
+document.getElementById("loginForm").addEventListener("submit", event => {
+    event.preventDefault();
+    document.getElementById("loginScreen").hidden = true;
+    document.getElementById("wellnessApp").hidden = false;
+});
+
+function logoutToLogin() {
+    document.getElementById("wellnessApp").hidden = true;
+    document.getElementById("loginScreen").hidden = false;
+    document.getElementById("loginForm").reset();
+    document.getElementById("loginIdentity").focus();
+}
 
 
 /* =========================================================
